@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <script src="./style.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Covid-19</title> 
+</head>
+<body>
+
+<!---------------------------------------------Starting of Welcome page-------------------------------------------------------------------->    
+    <div id="welcome">
+        <table>
+            <tr>
+                <td>
+                    <table class="head-log">
+                        <tr>
+                            <td><span class="tan">Tanishq</span><span id="seh">Sehra</span></td>
+                            <td><h1 style="size: 200%;">&#128512;</h1></td>
+                        </tr>
+                    </table> 
+                </td>
+                <td>
+                    <marquee>Welcome to PM Cares fund donation website.</marquee><br>
+                    <marquee>You can donate through many different methods i.e Net banking,Credit cards,Debit Cards and UPI.</marquee><br>
+                </td>
+                <td id="headpm">
+                    <p>Started by our Honorable Prime Minister <strong>Shri Narendra Modi</strong></p>
+                </td>
+            </tr>
+        </table>
+        <h1 id="pmhead">PM Cares Fund</h1>
+        <table id="pmwelcome">
+            <tr>
+                <td>
+                    <h4 id="welp">
+                        We all know that how the whole world is right know suffering with a pandemic i.e. COVID-19 or coronavirus disease of 2019.
+                        So we in India have tried as many as safety measures to save us from this virus.<span id="pm">Prime Minister Shri Narendra Modi</span> need 
+                        all of our help to fight againg this pandemic. The government request you all to contribute a little amount that you can afford
+                        to the PM Cares Fund to help the government and our country in need.
+                    </h4>
+                </td>
+                <td>
+                    <img class="img" src="https://blog.saginfotech.com/wp-content/uploads/2020/03/donate-pm-cares-fund-control-covid-19.jpg" alt="PM Cares Fund">
+                </td>
+            </tr>
+        </table>
+        <a href="#form"><button class="letgo">I want to Donate...</button></a>
+        
+    </div>
+
+<!----------------------------------------------------End of Welcome page------------------------------------------------------------------------------------------------------->
+
+
+<!-----------------------------------------------------Starting of form------------------------------------------------------------------------------------------------------------>
+
+    <div id="form">
+        <form class="fundform">
+            <h1 style="font-size: 200%;font-weight: bold;font-family: 'Courier New', Courier, monospace;font-style: italic;">Donation Form</h1>
+            <table id="fundtable">
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" onblur="firstname();" id="fn" placeholder="First Name.." class="text" required>
+                    </td>
+                    <td>
+                        <span id="firstprompt" style="font-size: 100%;">&nbsp;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last name:
+                    </td>
+                    <td>
+                        <input type="text" onblur="lastname();" id="ln" placeholder="Last name.." class="text" required>
+                    </td>
+                    <td>
+                        <span id="middleprompt" style="font-size: 100%;">&nbsp;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" required>Male  <input type="radio" name="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile Number: 
+                    </td>
+                    <td>
+                        <input type="number" onblur="mobnum();" id="num" placeholder="xxxxxxxxxx" class="text">
+                    </td>
+                    <td>
+                        <span id="numprompt" style="font-size: 100%;">&nbsp;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        <textarea rows="4" cols="30" name="Address" id="add" ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Do you want to donate anonymously ? 
+                    </td>
+                    <td>
+                        <input type="radio" name="agree" class="agree" value="yes">Yes <input type="radio" name="agree" value="no" class="agree">No
+                    </td>
+                </tr>
+            </table>
+            <div class="payment">
+                <p><strong>Mode of Payment:</strong></p>
+                <div class="netb">
+                    <img class="img1" src="https://telr.com/wp-content/uploads/2018/04/netbanking-wh.png" alt="netbanking"><br>
+                    <h5>Net Banking</h5><br>
+                    <input type="radio" name="mode">
+                </div>
+                <div class="netb">
+                    <img class="img1" src="https://www.sonalia.com/wp-content/uploads/2019/04/credit_card_logo.png" alt="cards"><br>
+                    <h5>Credit Card/Debit Card</h5><br>
+                    <input type="radio" name="mode">
+                </div>
+                <div class="netb">
+                    <img class="img1" src="https://i0.wp.com/financebuddha.com/blog/wp-content/uploads/2016/12/23155635/UPI1.jpg?fit=945%2C709&ssl=1" alt="upi"><br>
+                    <h5>UPI</h5><br>
+                    <input type="radio" name="mode">
+                </div>
+            </div>
+            <div class="amount">
+                <h3>Enter the Amount You want to donate: Rs.<input type="number" min="10" value="10" id="amount"></h3>
+            </div>
+                <div class="submit" onclick="receipt();">Submit</div>
+        </form>
+        <div id="receipt">
+            <span id="r1">&nbsp;</span>
+        </div>
+    </div> 
+
+<!-----------------------------------------------------End of Form------------------------------------------------------------------------------------------------------------------>
+
+
+<!-----------------------------------------------------Footer portion---------------------------------------------------------------------------------------------------------------->
+
+    <footer>
+        <div class="botc">
+            <a class="footer-link" href="https://www.linkedin.com/in/tanishq-s-83a64b125">LinkedIn</a>
+            <a class="footer-link" href="https://instagram.com/_tanishqq_?igshid=9nzlmfb7qgsf">Instagram</a>
+            <a class="footer-link" href="https://code.dcoder.tech/profile/sehratanishq">Code.dcoder</a>
+            <a class="footer-link" href="https://github.com/tanishq1502">GitHub</a>
+            <p type="copyright">@2020 Tanishq Sehra</p>
+        </div>
+    </footer> 
+     
+</body>
+
+<script src="./week6.js"></script>
+</html>
